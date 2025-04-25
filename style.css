@@ -17,6 +17,34 @@ body {
 
 a {
   text-decoration: none;
+  color: #d794ff;
+  text-shadow: 0 0 2px #d794ff, 0 0 10px #d794ff;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: #ffe1ff;
+  text-shadow: 0 0 7px #ffe1ff, 0 0 14px #ffe1ff;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  background: rgba(127, 90, 240, 0.2);
+  padding: 10px 15px;
+  border: 1px solid #7f5af0;
+  border-radius: 10px;
+  width: fit-content;
+  box-shadow: 0 0 8px #7f5af0;
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: scale(1.02);
+  background: rgba(127, 90, 240, 0.3);
 }
 
 nav {
@@ -59,6 +87,7 @@ nav h1 {
   color: white;
   font-size: 35px;
   padding: 5px 10px;
+  text-shadow: none;
 }
 
 .fa-facebook {
@@ -114,7 +143,7 @@ main {
 }
 
 .Text {
-  margin: auto auto auto 15px;
+  margin: 0.5rem auto auto 15px;
 }
 
 #About img {
@@ -133,16 +162,50 @@ main {
   .nav-left,
   .nav-right {
     justify-content: center;
+    flex: unset;
+  }
+
+  nav h1 {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .waypoints {
+    flex-direction: column;
+    align-items: center;
   }
 
   .waypoints a {
-    flex: 1 1 40%;
+    /* flex: 1 1 40%; */
     text-align: center;
-    min-width: 120px;
+    /* min-width: 120px; */
+    flex: unset;
+    min-width: 60%;
+  }
+
+  .Container {
+    padding: 0 1rem;
+  }
+
+  #About {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   #About img {
-    width: 95%;
-    max-width: 300px;
+    /* width: 95%; */
+    width: 150px;
+    height: 150px;
+    /* max-width: 300px; */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Text {
+    margin: 1rem auto 0 auto;
+    padding: 0 1rem;
   }
 }
