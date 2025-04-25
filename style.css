@@ -21,26 +21,37 @@ a {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 30px;
+  margin: 1rem auto;
+  max-width: 95%;
+  background: rgba(0, 0, 0, 0.2);
   border: 2px solid #7f5af0;
   border-radius: 15px;
-  padding: 12px 20px;
-  margin: 1rem auto;
-  max-width: 1200px;
-  background: rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 10px #7f5af0;
   color: white;
+  box-sizing: border-box;
 }
 
 .nav-left,
 .nav-right {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.nav-right {
+  justify-content: flex-end;
 }
 
 nav h1 {
-  margin: 0 auto;
+  flex: 2;
   text-align: center;
+  font-size: 1.2rem;
+  word-break: break-word;
 }
 
 .fa-brands,
@@ -60,11 +71,12 @@ nav h1 {
 
 .waypoints {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
   margin: 1rem auto;
-  width: fit-content;
+  padding: 0 1rem;
 }
 
 .waypoints a {
@@ -73,7 +85,6 @@ nav h1 {
   border-radius: 12px;
   margin: 0px 4px;
   padding: 12px 20px;
-  max-width: 1200px;
   border: 2px solid #d794ff;
   box-shadow: 0 0 10px #d794ff, 0 0 20px #e3a8ff;
   text-shadow: 0 0 5px #d794ff;
@@ -84,4 +95,54 @@ nav h1 {
   transform: translateY(-5px);
   box-shadow: 0 0 12px #f3c6ff, 0 0 24px #ffe1ff;
   background: linear-gradient(145deg, #5a00a1, #7a00cc);
+}
+
+main {
+  display: block;
+  align-items: center;
+  max-width: 95%;
+  margin: 1rem auto;
+}
+
+.Container {
+  display: block;
+  margin-top: 50px;
+}
+
+#About {
+  display: flex;
+}
+
+.Text {
+  margin: auto auto auto 15px;
+}
+
+#About img {
+  width: 150px;
+  height: 150px;
+  float: left;
+  border-radius: 255px
+}
+
+@media (max-width: 500px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-left,
+  .nav-right {
+    justify-content: center;
+  }
+
+  .waypoints a {
+    flex: 1 1 40%;
+    text-align: center;
+    min-width: 120px;
+  }
+
+  #About img {
+    width: 95%;
+    max-width: 300px;
+  }
 }
