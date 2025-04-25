@@ -1,0 +1,87 @@
+@font-face {
+  font-family: CascadiaMonoNF;
+  src: url(fonts/CascadiaMonoNF.ttf);
+}
+
+* {
+  font-family: CascadiaMonoNF, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  transition-duration: 200s;
+}
+
+body {
+  color: white;
+  background: radial-gradient(circle at center, #380a6c, #000000);
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  border: 2px solid #7f5af0;
+  border-radius: 15px;
+  padding: 12px 20px;
+  margin: 1rem auto;
+  max-width: 1200px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px #7f5af0;
+  color: white;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+nav h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fa-brands,
+.fa-solid {
+  color: white;
+  font-size: 35px;
+  padding: 5px 10px;
+}
+
+.fa-facebook {
+  color: rgb(0, 0, 255);
+}
+
+.fa-linkedin {
+  color: rgb(10, 102, 194);
+}
+
+.waypoints {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200;
+  margin: 1rem auto;
+  width: fit-content;
+}
+
+.waypoints a {
+  color: white;
+  background: linear-gradient(145deg, #3e0066, #5a00a1);
+  border-radius: 12px;
+  margin: 0px 4px;
+  padding: 12px 20px;
+  max-width: 1200px;
+  border: 2px solid #d794ff;
+  box-shadow: 0 0 10px #d794ff, 0 0 20px #e3a8ff;
+  text-shadow: 0 0 5px #d794ff;
+  transition: all 0.3s ease;
+}
+
+.waypoints a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px #f3c6ff, 0 0 24px #ffe1ff;
+  background: linear-gradient(145deg, #5a00a1, #7a00cc);
+}
